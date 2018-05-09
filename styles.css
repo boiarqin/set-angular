@@ -1,0 +1,250 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../app/fonts/icomoon.eot');
+  src:  url('../app/fonts/icomoon.eot') format('embedded-opentype'),
+    url('../app/fonts/icomoon.ttf') format('truetype'),
+    url('../app/fonts/icomoon.woff') format('woff'),
+    url('../app/fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Master Styles */
+h1 {
+  color: #369; 
+  font-family: Helvetica, Arial, sans-serif;  
+  font-size: 250%;
+}
+h2, h3 { 
+  color: #444;
+  font-family: Helvetica, Arial, sans-serif; 
+  font-weight: lighter;
+}
+body {
+    margin: 0;
+}
+body, input[text], button { 
+  color: #888; 
+  font-family: Cambria, Georgia; 
+}
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa; 
+  cursor: auto;
+}
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.router-link-active {
+  color: #039be5;
+}
+
+/* everywhere else */
+* { 
+  font-family: Helvetica, Arial, sans-serif; 
+}
+.clearfix::after {
+    visibility: hidden; 
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+/* CUSTOM */
+header {
+    display: block;
+    padding: 16px 32px;
+    margin-bottom: 20px;
+    height: 50px;
+    background: #00BCD4;
+    box-shadow: 0 1.5px 6px rgba(0,0,0,.12), 0 1.5px 4px rgba(0,0,0,.24);
+}
+header h1 {
+    font-size: 18px;
+    color: white;
+    font-weight: normal;
+}
+
+game-board {
+    display: block;
+    padding: 16px 32px;
+    width: 500px;
+}
+
+set-card {
+    display: block;
+    height: 100px;
+    width: 150px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+set-card:nth-child(3n){
+  margin-right: 0;
+}
+
+.set-card {
+    border: 1px solid #AAA;
+    border-radius: 10px;
+    box-shadow: 0 1.5px 6px rgba(0,0,0,.12), 0 1.5px 4px rgba(0,0,0,.24);
+    background: #FFF;
+    cursor: pointer;
+}
+.set-card.selected {
+    box-shadow: 0 10px 30px rgba(0,0,0,.19), 0 6px 12px rgba(0,0,0,.23);
+    background: #B3E5FC;
+}
+.set-card.player-selected {
+    box-shadow: 0 10px 30px rgba(0,0,0,.19), 0 6px 12px rgba(0,0,0,.23);
+    background: #B3E5FC;
+}
+.set-card.opponent-selected {
+    box-shadow: 0 10px 30px rgba(0,0,0,.19), 0 6px 12px rgba(0,0,0,.23);
+    background: #FFECB3;
+}
+.set-card::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding: 20px 0;
+    font-family: 'icomoon';
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 7px;
+}
+.card-red {
+    color: red;
+}
+.card-green {
+    color: green;
+}
+.card-purple {
+    color: purple;
+}
+
+/*DIAMONDS*/
+.card-1-diamond-solid::before{
+    content:"\e600";
+}
+.card-2-diamond-solid::before{
+    content:"\e600\e600";
+}
+.card-3-diamond-solid::before{
+    content:"\e600\e600\e600";
+}
+.card-1-diamond-striped::before{
+    content:"\e601";
+}
+.card-2-diamond-striped::before{
+    content:"\e601\e601";
+}
+.card-3-diamond-striped::before{
+    content:"\e601\e601\e601";
+}
+.card-1-diamond-blank::before{
+    content:"\e602";
+}
+.card-2-diamond-blank::before{
+    content:"\e602\e602";
+}
+.card-3-diamond-blank::before{
+    content:"\e602\e602\e602";
+}
+/*OVALS*/
+.card-1-oval-solid::before {
+  content:"\e606"
+}
+.card-2-oval-solid::before {
+  content:"\e606\e606"
+}
+.card-3-oval-solid::before {
+  content:"\e606\e606\e606"
+}
+.card-1-oval-striped::before {
+  content:"\e608"
+}
+.card-2-oval-striped::before {
+  content:"\e608\e608"
+}
+.card-3-oval-striped::before {
+  content:"\e608\e608\e608"
+}
+.card-1-oval-blank::before {
+  content:"\e607"
+}
+.card-2-oval-blank::before {
+  content:"\e607\e607"
+}
+.card-3-oval-blank::before {
+  content:"\e607\e607\e607"
+}
+
+/*SQUIGGLES*/
+.card-1-squiggle-solid:before {
+    content:"\e603";
+}
+.card-2-squiggle-solid:before {
+    content:"\e603\e603";
+}
+.card-3-squiggle-solid:before {
+    content:"\e603\e603\e603";
+}
+.card-1-squiggle-striped:before {
+    content:"\e605";
+}
+.card-2-squiggle-striped:before {
+    content:"\e605\e605";
+}
+.card-3-squiggle-striped:before {
+    content:"\e605\e605\e605";
+}
+.card-1-squiggle-blank:before {
+    content:"\e604";
+}
+.card-2-squiggle-blank:before {
+    content:"\e604\e604";
+}
+.card-3-squiggle-blank:before {
+    content:"\e604\e604\e604";
+}
+
+.score-tray-header {
+    display: block;
+    padding: 16px 32px;
+    margin-bottom: 20px;
+    height: 50px;
+    background: #0097A7;
+    color: #FFF;
+    box-shadow: 0 1.5px 4px rgba(0,0,0,.24), 0 1.5px 6px rgba(0,0,0,.12);
+}
